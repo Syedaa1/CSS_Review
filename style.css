@@ -1,0 +1,344 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+.layout{
+  border: 2px #9999e5 solid;
+  display: grid;
+  grid: 
+    "span12 span12 span12 span12 span12 span12 span12 span12 span12 span12  span12 span12" 1fr
+    "span6 span6 span6 span6 span6 span6 . . . . . ." 1fr
+  ". . . . . span3 span3 span3 . . . ." 1fr
+  ". . . . span1 . . . . . . ." 1fr
+  / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 8px;
+}
+.span12 {grid-area: span12; background-color: #d1e0ff;}
+.span6 {grid-area: span6;  background-color:#d1e0ff;}
+.span3 {grid-area: span3;  background-color: #d1e0ff;}
+.span1 {grid-area: span1;  background-color: #d1e0ff;}
+
+.layout2{
+  border: 2px #9999e5 solid;
+  width: 98%;
+  height: 300px;
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: repeat(3,1fr);
+  gap: 8px
+}
+
+.layout3{
+  border: 2px solid red;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid: 
+    "header header header" auto 
+  "leftside body rightSide " 1fr 
+  "footer footer footer" auto 
+  / auto 1fr auto;
+  gap: 8px;
+}
+
+.header{grid-area: header; background-color: #fffed6;}
+.leftSide{grid-area: leftside; background-color: #c39797;}
+.body{grid-area: body; background-color: #e6d1d1;}
+.rightSide{grid-area: rightSide; background-color: #e6d1d1;}
+.footer{grid-area: footer; background-color: #ffebeb;}
+
+.layout4{
+  border: 2px #71c8f4 solid;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid: 
+    "sidebar body1" 1fr 
+  / auto 1fr;
+  gap: 8px;
+}
+
+.sidebar{grid-area: sidebar; background-color: #d1ffff;}
+.body1{grid-area: body1; background-color: #9dcccd;}
+/*Header Main Footer*/
+.layout5{
+  border: 2px #dcb7d0 solid;
+  width: 99%;
+  height: 300px;
+  display: grid; 
+  grid: 
+    "header1" auto 
+    "main" 1fr
+    "footer1" auto
+  / 1fr;
+  gap:8px;
+}
+.header1{grid-area: header1; background-color: lavender;}
+.main{grid-area: main; background-color:  #d6d8ff; }
+.footer1{grid-area: footer1; background-color: #ebcdf9;}
+/*Infinite Rows*/
+.layout6{
+  border: 2px solid gold;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px
+}
+.infy{
+  border:1px solid black;
+  background-color: #d1e0ff;
+}
+/*Infinite Rows with Areas*/
+.layout7{
+  border: 2px solid #aacd98;
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.col1Last{
+  grid-column: 1 / -1;
+  background-color: #0047d6;
+}
+/*Flexbox Rows*/
+.layout8{
+  border: 2px solid #ffcf99;
+  display: flex;
+  gap: 16px;
+}
+
+.flRow{
+  border: 1px solid blue;
+  background-color: #ffefe0;
+}
+/*Flexbox ROW wrap*/
+.layout9{
+  border: 2px solid #75a3ff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+/*flexbox fitting the space*/
+.layout10{
+  border: 2px solid #d9d1ff;
+  display: flex;
+  gap: 16px;
+}
+.grow1{
+  flex-grow: 1;
+background-color: #e8e9f7;
+  border: 1px solid black;
+}
+/*Flexbox Fit to remaining space*/
+.layout11{
+  border: 2px solid #bbe2d3;
+  display: flex;
+  gap: 16px;
+}
+/*Flexbox Separate*/
+.layout12{
+  border:2px solid#9dc7e2;
+  display: flex;
+  gap:16px;
+}
+.layout13{
+  border: 2px solid #6ad2ec;
+  display: flex;
+  gap: 16px;
+}
+.marginLeft{
+  margin-left: auto;
+  background-color: #dbf5f0;
+  border: 1px solid black;
+}
+
+
+/*Animation*/
+.bg{
+  width:300px;
+  height:100px;
+  background-color: #cbaffd;
+  border: 1px solid black;
+}
+/*Translate*/ 
+.translate{
+  width: 300px;
+  height: 100px;
+  background-color: #ccbbec;
+  border: 1px solid black;
+  transform: translate(10px, 10px);
+}
+/*rotate*/ 
+#rotate{
+  transform: rotate(20deg);
+}
+/*Scale*/ 
+.scale{
+  width: 300px;
+  height: 100px;
+  background-color: #bbe2e2;
+  border: 1px solid black;
+  margin: 150px;
+  transform: scale(2, 3);
+}
+/*Scale X*/ 
+.scaleX{
+  width: 300px;
+  height: 100px;
+  background-color: lightpink;
+  border: 1px solid black;
+  margin: 10px;
+  transform: scaleX(2);
+}
+/*Scale Y*/
+.scaleY{
+  width: 300px;
+  height: 100px;
+  background-color: #70a0ff;
+  border: 1px solid black;
+  margin: 10px;
+  transform: scaleY(2);
+}
+
+/*Skew*/ 
+.skew{
+  width: 300px;
+  height: 100px;
+  background-color: #62dfdf
+  border: 1px solid black;
+  transform: skew(10deg, 10deg);
+}
+/*Skew X*/ 
+.skewX{
+  width: 300px;
+  height: 100px;
+  background-color: lightpink;
+  border: 1px solid black;
+  transform: scaleX(10deg);
+}
+/*Skew Y*/
+.skewY{
+  width: 300px;
+  height: 100px;
+  background-color: #70a0ff;
+  border: 1px solid black;
+  transform: scaleY(10deg);
+}
+
+/*Matrix*/ 
+/*matrix(scaleX, skewY, skewX, scaleY, translateX, translateY)*/
+#matrix{
+  transform: matrix(1, -0.3, 0, 1, 0, 0);
+}
+#matrix2D{
+  trandform: matrix(1,0,0.5,1,150,0);
+}
+
+#twoD{
+  border: 3px dashed lavendar;
+  background-color: #fffedb;;
+}
+
+/*rotate in 3D x-axis*/ 
+#rotate3DX{
+  transform: rotateX(150deg);
+}
+
+/*rotate in 3D Y-axis*/
+#rotate3DY{
+  transform: rotateY(150deg)
+}
+
+/*rotate in 3D Z-axis*/
+#rotate3DZ{
+  transform: rotateZ(90deg)
+}
+
+/*Animate it*/ 
+.bg:hover{
+  transform: rotate3d(1,1,1,180deg);
+transform: translated3d(20px, 20px,20px);
+}
+
+
+/*To decorate any div with class perry*/ 
+.perry{
+  width: 100px;
+  height: 100px;
+  background-color: #f7f7f7
+  border: 1px soid black;
+  transition: width 2s, height 1s, background-color 3s;
+}
+
+/*Transitions*/ 
+#transition{
+  width: 200px;
+  height: 100px;
+  background-color: #c4e1bc
+}
+
+/*Linear*/ 
+#linear: :hover{
+  transition-timing-function:linear;
+}
+
+/*Ease*/ 
+#ease: hover{
+  width:200px;
+  height:200px;
+  background-color: #c4e1bc;
+  transition-timing-function:ease;
+}
+
+/*Ease In*/
+#easeIn: hover{
+  width:200px;
+  height:200px;
+  background-color: #c4e1bc;
+  transition-timing-function:ease-in;
+}
+
+/*Ease Out*/
+#easeOut: hover{
+  width:200px;
+  height:200px;
+  background-color: #c4e1bc;
+  transition-timing-function:ease-out;
+}
+
+/*Ease In Out*/
+#easeInOut: hover{
+  width:200px;
+  height:200px;
+  background-color: #c4e1bc;
+  transition-timing-function:ease-in-out;
+}
+
+/*Animations*/
+/*
+@keyframes
+animation-name
+animation-duration
+animation-delay
+animation-iteration-count
+animation-direction
+antmation-timing-function
+animation-fill-mode
+animation
+*/
+
+/*The animation code*/
+@keyframes example{
+from{background-color:red;}
+to{background-color:yellow;}
+
+/* The Element to apply antmation to */ .CheeseCake{
+width: 100px;
+height: 100px;
+background-color:red;
+antmation-name: example;
+animation-duration: 8;
+}
